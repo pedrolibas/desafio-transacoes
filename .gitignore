@@ -1,5 +1,4 @@
 __pycache__
 venv
 db.sqlite3
-CNAB.json
-CNAB.txt
+data_file

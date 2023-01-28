@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import TransactionsView
+from .views import FileView
 
 urlpatterns = [
-    path("teste/", TransactionsView.as_view())
+    path("teste/", FileView.as_view())
 ]
