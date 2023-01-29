@@ -19,7 +19,7 @@ class CompanySerializer(serializers.ModelSerializer):
             else:
                 total_value += transation["value"]
 
-        return total_value
+        return round(total_value, 2)
 
     def create(self, validated_data):
         return Company.objects.get_or_create(**validated_data)
