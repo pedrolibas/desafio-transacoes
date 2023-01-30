@@ -13,7 +13,6 @@ class FileSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         file = File.objects.create(**validated_data)
         converted_file = convert_file()
-        print(converted_file)
         
         for information in converted_file:
             company_dict = dict(store_owner = information.pop("store_owner"), store_name = information.pop("store_name"))
